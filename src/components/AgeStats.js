@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PartyPopper from '../assets/party-popper.jpg'
 
 class AgeStats extends Component {
     timeSince(date){
@@ -10,7 +11,7 @@ class AgeStats extends Component {
         let years= Math.floor(day/365);
         day -= years *365;
         let months =Math.floor(day/31);
-        day -= months*365;
+        day -= months*31;
 
         return `${years} Years, ${months}Months ${day} days`
     }
@@ -20,6 +21,7 @@ class AgeStats extends Component {
             <div>
             <h3>{this.props.date}</h3>
             <h4>Congratulations your age is {this.timeSince(this.props.date)}</h4>
+            <img src = {PartyPopper} alt="party-popper" className="party-popper"/>
             </div>
         )
     }
