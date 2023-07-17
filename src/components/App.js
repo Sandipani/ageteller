@@ -1,8 +1,22 @@
 import React, {Component} from 'react';
+import { Form,FormControl, Button } from 'react-bootstrap';
+import './App.css';
 
 class App extends Component {
     render () {
-        return <div>ageteller component</div>
+        return (
+        <div className="App">
+            <Form inline>
+                <h2>Enter your birthday !!!</h2>
+                <FormControl type="date">
+                </FormControl>
+                {' '}
+                <Button>
+                    Submit
+                </Button>
+            </Form>
+        </div>
+        )
     }
 }
 
